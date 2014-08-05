@@ -1,3 +1,5 @@
+require 'sanitize'
+
 ###
 # Blog settings
 ###
@@ -20,8 +22,8 @@ activate :blog do |blog|
   # blog.day_link = "{year}/{month}/{day}.html"
   # blog.default_extension = ".markdown"
 
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
+  # blog.tag_template = "tag.html"
+  # blog.calendar_template = "calendar.html"
 
   # Enable pagination
   # blog.paginate = true
@@ -34,6 +36,18 @@ activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :git
 end
+
+# Required
+set :blog_url, 'http://www.example.com'
+set :blog_name, 'Middleman'
+set :blog_description, 'Makes developing websites simple.'
+set :author_name, 'Middleman'
+set :author_bio, 'Middleman is a static site generator using all the ' \
+                 'shortcuts and tools in modern web development.'
+# Optional
+set :author_locaton, nil
+set :author_website, nil
+set :blog_logo, nil
 
 page "/feed.xml", layout: false
 
@@ -75,7 +89,16 @@ page "/feed.xml", layout: false
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# activate :livereload
+activate :livereload
+
+# Pretty URLs - http://middlemanapp.com/pretty-urls/
+activate :directory_indexes
+
+# Middleman-Syntax - https://github.com/middleman/middleman-syntax
+set :haml, { ugly: true }
+set :markdown_engine, :redcarpet
+set :markdown, fenced_code_blocks: true, smartypants: true
+activate :syntax, line_numbers: true
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -83,6 +106,74 @@ page "/feed.xml", layout: false
 #     "Helping"
 #   end
 # end
+
+helpers do
+  def page_title
+    title = blog_name.dup
+    if current_page.data.title
+      title << ": #{current_page.data.title}"
+    elsif is_blog_article?
+      title << ": #{current_article.title}"
+    end
+    title
+  end
+
+  def page_description
+    if is_blog_article?
+      Sanitize.clean(current_article.summary(150, '')).strip.gsub(/\s+/, ' ')
+    else
+      blog_description
+    end
+  end
+
+  def page_class
+    is_blog_article? ? 'post-template tag-getting-started' : 'home-template'
+  end
+
+  def summary(article)
+    Sanitize.clean(article.summary, whitespace_elements: %w(h1))
+  end
+
+  def author
+    {
+      bio: author_bio,
+      location: author_locaton,
+      name: author_name,
+      website: author_website
+    }
+  end
+
+  def tags?(article = current_article)
+    article.tags.present?
+  end
+  def tags(article = current_article, separator = ' | ')
+    article.tags.join(separator)
+  end
+
+  def current_article_url
+    URI.join(blog_url, current_article.url)
+  end
+
+  def blog_logo?
+    return false if blog_logo.blank?
+    File.exists?(File.join('source', images_dir, blog_logo))
+  end
+
+  def twitter_url
+    "https://twitter.com/share?text=#{current_article.title}" \
+      "&amp;url=#{current_article_url}"
+  end
+  def facebook_url
+    "https://www.facebook.com/sharer/sharer.php?u=#{current_article_url}"
+  end
+  def google_plus_url
+    "https://plus.google.com/share?url=#{current_article_url}"
+  end
+
+  def feed_path
+    '/feed.xml'
+  end
+end
 
 set :css_dir, 'stylesheets'
 
