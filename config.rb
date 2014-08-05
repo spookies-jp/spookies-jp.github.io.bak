@@ -2,7 +2,7 @@
 # Blog settings
 ###
 
-# Time.zone = "UTC"
+Time.zone = "Tokyo"
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
@@ -27,6 +27,12 @@ activate :blog do |blog|
   # blog.paginate = true
   # blog.per_page = 10
   # blog.page_link = "page/{num}"
+end
+
+activate :deploy do |deploy|
+  deploy.branch = 'master'
+  deploy.build_before = true
+  deploy.method = :git
 end
 
 page "/feed.xml", layout: false
