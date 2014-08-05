@@ -1,0 +1,1482 @@
+@charset "UTF-8";
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+/*
+
+    0.  Normalize
+    1.  Icons
+    2.  General
+    3.  Utilities
+    4.  General
+    5.  Single Post
+    6.  Third Party Elements
+    7.  Pagination
+    8.  Footer
+    9.  Media Queries (Tablet)
+    10. Media Queries (Mobile)
+
+ */
+/* ==========================================================================
+   0. Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
+   ========================================================================== */
+/* line 30, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+article, aside, details,
+figcaption, figure,
+footer, header, hgroup,
+main, nav, section,
+summary {
+  display: block; }
+
+/* line 31, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+audio, canvas, video {
+  display: inline-block; }
+
+/* line 32, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 33, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+[hidden], template {
+  display: none; }
+
+/* line 34, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/* line 39, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+body {
+  margin: 0; }
+
+/* line 40, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+a {
+  background: transparent; }
+
+/* line 41, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+a:focus {
+  outline: thin dotted; }
+
+/* line 42, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+a:active, a:hover {
+  outline: 0; }
+
+/* line 43, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* line 44, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 45, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+b, strong {
+  font-weight: bold; }
+
+/* line 46, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+dfn {
+  font-style: italic; }
+
+/* line 47, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/* line 52, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 54, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+code, kbd, pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/* line 55, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+pre {
+  white-space: pre-wrap; }
+
+/* line 56, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/* line 57, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+small {
+  font-size: 80%; }
+
+/* line 58, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 64, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+sup {
+  top: -0.5em; }
+
+/* line 65, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+sub {
+  bottom: -0.25em; }
+
+/* line 66, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+img {
+  border: 0; }
+
+/* line 67, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 68, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+figure {
+  margin: 0; }
+
+/* line 69, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/* line 74, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+legend {
+  border: 0;
+  padding: 0; }
+
+/* line 76, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+button, input, select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+/* line 77, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+button, input {
+  line-height: normal; }
+
+/* line 78, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+button, select {
+  text-transform: none; }
+
+/* line 80, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+button, html input[type="button"],
+input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+/* line 84, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+/* line 86, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/* line 87, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/* line 94, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 96, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 97, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* line 98, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ==========================================================================
+   1. Icons - Sets up the icon font and respective classes
+   ========================================================================== */
+/* Import the font file with the icons in it */
+@font-face {
+  font-family: 'icons';
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Apply these base styles to all icons */
+/* line 122, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.icon-ghost:before,
+.icon-feed:before,
+.icon-twitter:before,
+.icon-google-plus:before,
+.icon-facebook:before {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* Each icon is created by inserting the corret character into the
+   content of the :before pseudo element. Like a boss. */
+/* line 137, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.icon-ghost:before {
+  content: "\e000"; }
+
+/* line 140, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.icon-feed:before {
+  content: "\e001"; }
+
+/* line 143, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.icon-twitter:before {
+  content: "\e002";
+  font-size: 1.1em; }
+
+/* line 147, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.icon-google-plus:before {
+  content: "\e003"; }
+
+/* line 150, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.icon-facebook:before {
+  content: "\e004"; }
+
+/* ==========================================================================
+   2. General - Setting up some base styles
+   ========================================================================== */
+/* line 159, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+html {
+  height: 100%;
+  max-height: 100%;
+  font-size: 62.5%; }
+
+/* line 165, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+body {
+  height: 100%;
+  max-height: 100%;
+  font-family: 'Noto Serif', serif;
+  font-size: 2.0rem;
+  line-height: 1.6em;
+  color: #3A4145; }
+
+/* line 174, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+::-moz-selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none; }
+
+/* line 180, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+::selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none; }
+
+/* line 187, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+h1, h2, h3,
+h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+/* line 194, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+h1 {
+  font-size: 5rem;
+  line-height: 1.2em;
+  letter-spacing: -2px;
+  text-indent: -3px; }
+
+/* line 201, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+h2 {
+  font-size: 4rem;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+  text-indent: -2px; }
+
+/* line 208, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+h3 {
+  font-size: 3.5rem; }
+
+/* line 212, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+h4 {
+  font-size: 3rem; }
+
+/* line 216, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+h5 {
+  font-size: 2.5rem; }
+
+/* line 220, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+h6 {
+  font-size: 2rem; }
+
+/* line 224, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+a {
+  color: #4a4a4a;
+  transition: color ease 0.3s; }
+
+/* line 229, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+a:hover {
+  color: #57A3E8; }
+
+/* line 234, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a {
+  color: #50585D; }
+
+/* line 239, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+p, ul, ol, dl {
+  margin: 1.6em 0; }
+
+/* line 244, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+ol ol, ul ul,
+ul ol, ol ul {
+  margin: 0.4em 0; }
+
+/* line 248, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+dl dt {
+  float: left;
+  width: 180px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  margin-bottom: 1em; }
+
+/* line 260, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+dl dd {
+  margin-left: 200px;
+  margin-bottom: 1em; }
+
+/* line 265, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #efefef;
+  margin: 3.2em 0;
+  padding: 0; }
+
+/* line 274, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+blockquote {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0 1.6em -2.2em;
+  padding: 0 0 0 1.6em;
+  border-left: #4a4a4a 0.4em solid; }
+
+/* line 282, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+blockquote p {
+  margin: 0.8em 0;
+  font-style: italic; }
+
+/* line 287, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+blockquote small {
+  display: inline-block;
+  margin: 0.8em 0 0.8em 1.5em;
+  font-size: 0.9em;
+  color: #ccc; }
+
+/* line 294, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+blockquote small:before {
+  content: '\2014 \00A0'; }
+
+/* line 296, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+blockquote cite {
+  font-weight: bold; }
+
+/* line 300, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+blockquote cite a {
+  font-weight: normal; }
+
+/* line 302, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+mark {
+  background-color: #ffc336; }
+
+/* line 306, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+code, tt {
+  padding: 1px 3px;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.85em;
+  white-space: pre-wrap;
+  border: 1px solid #E3EDF3;
+  background: #F7FAFB;
+  border-radius: 2px; }
+
+/* line 316, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+pre {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  border: 1px solid #E3EDF3;
+  width: 100%;
+  padding: 10px;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.9em;
+  white-space: pre;
+  overflow: auto;
+  background: #F7FAFB;
+  border-radius: 3px; }
+
+/* line 331, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+pre code, tt {
+  font-size: inherit;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+  background: transparent;
+  border: none;
+  padding: 0; }
+
+/* line 340, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+kbd {
+  display: inline-block;
+  margin-bottom: 0.4em;
+  padding: 1px 8px;
+  border: #ccc 1px solid;
+  color: #666;
+  text-shadow: #fff 0 1px 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  background: #f4f4f4;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset; }
+
+/* line 356, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+table {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent; }
+
+/* line 366, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+table th,
+table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #efefef; }
+
+/* line 374, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+table th {
+  color: #000; }
+
+/* line 381, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0; }
+
+/* line 385, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+table tbody + tbody {
+  border-top: 2px solid #efefef; }
+
+/* line 387, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+table table table {
+  background-color: #fff; }
+
+/* line 390, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+  background-color: #f6f6f6; }
+
+/* line 395, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+  background: transparent; }
+
+/* line 399, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+iframe, .fluid-width-video-wrapper {
+  display: block;
+  margin: 1.6em 0; }
+
+/* When a video is inside the fitvids wrapper, drop the
+margin on the iframe, cause it breaks stuff. */
+/* line 406, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.fluid-width-video-wrapper iframe {
+  margin: 0; }
+
+/* ==========================================================================
+   3. Utilities - These things get used a lot
+   ========================================================================== */
+/* Clears shit */
+/* line 417, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+/* line 421, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.clearfix:after {
+  clear: both; }
+
+/* line 422, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.clearfix {
+  *zoom: 1; }
+
+/* Hides shit */
+/* line 425, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.hidden {
+  text-indent: -9999px;
+  visibility: hidden;
+  display: none; }
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+/* line 432, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.inner {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto; }
+
+/* Centres vertically yo. (IE8+) */
+/* line 440, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.vertical {
+  display: table-cell;
+  vertical-align: middle; }
+
+/* ==========================================================================
+   4. General - The main styles for the the theme
+   ========================================================================== */
+/* Big cover image on the home page */
+/* line 451, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.site-head {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 60%;
+  margin-bottom: 5rem;
+  text-align: center;
+  color: #fff;
+  background: #303538 no-repeat center center;
+  background-size: cover; }
+
+/* line 463, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.blog-logo {
+  text-decoration: none; }
+
+/* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
+/* line 468, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.blog-logo img {
+  display: block;
+  max-height: 100px;
+  width: auto;
+  margin: 0 auto;
+  line-height: 0; }
+
+/* The details of your blog. Defined in ghost/settings/ */
+/* line 477, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.blog-title {
+  margin: 10px 0 10px 0;
+  font-size: 5rem;
+  letter-spacing: -1px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); }
+
+/* line 486, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.blog-description {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.5em;
+  font-weight: 300;
+  font-family: 'Noto Serif', serif;
+  letter-spacing: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); }
+
+/* Every post, on every page, gets this style on its <article> tag */
+/* line 497, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  margin: 4rem auto;
+  padding-bottom: 4rem;
+  border-bottom: #EBF2F6 1px solid;
+  word-break: break-word;
+  hyphens: auto; }
+
+/* Add a little circle in the middle of the border-bottom on our .post
+   just for the lolz and stylepoints. */
+/* line 510, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post:after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: #E7EEF2 1px solid;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  box-shadow: #fff 0 0 0 5px; }
+
+/* line 527, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-title {
+  margin: 0; }
+
+/* line 531, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-title a {
+  text-decoration: none; }
+
+/* line 535, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-excerpt p {
+  margin: 1.6rem 0 0 0;
+  font-size: 0.9em;
+  line-height: 1.6em; }
+
+/* line 541, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-meta {
+  display: inline-block;
+  margin: 0 0 5px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  color: #9EABB3; }
+
+/* line 549, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-meta a {
+  color: #9EABB3;
+  text-decoration: none; }
+
+/* line 554, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-meta a:hover {
+  text-decoration: underline; }
+
+/* line 558, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.user-meta {
+  position: relative;
+  padding: 0.3rem 40px 0 100px;
+  min-height: 77px; }
+
+/* line 564, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.user-image {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* line 570, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.user-name {
+  display: block;
+  font-weight: bold; }
+
+/* line 575, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.user-bio {
+  display: block;
+  max-width: 440px;
+  font-size: 1.4rem;
+  line-height: 1.5em; }
+
+/* line 582, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.publish-meta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4.3rem 0 4rem 0;
+  text-align: right; }
+
+/* line 590, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.publish-heading {
+  display: block;
+  font-weight: bold; }
+
+/* line 595, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.publish-date {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.5em; }
+
+/* ==========================================================================
+   5. Single Post - When you click on an individual post
+   ========================================================================== */
+/* Stop .full-img from creating horizontal scroll - slight hack due to
+   imperfections with browser width % calculations and rounding */
+/* line 607, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-template .content {
+  overflow: hidden; }
+
+/* Tweak the .post wrapper style */
+/* line 612, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-template .post {
+  margin-top: 0;
+  border-bottom: none;
+  padding-bottom: 0; }
+
+/* Kill that stylish little circle that was on the border, too */
+/* line 619, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-template .post:after {
+  display: none; }
+
+/* Insert some mad padding up in the header for better spacing */
+/* line 624, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-template .post-header {
+  padding: 60px 0;
+  text-align: center; }
+
+/* line 629, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-template .blog-title {
+  display: inline-block;
+  padding: 2.5rem 0; }
+
+/* Keep images centred and within the bounds of the post-width */
+/* line 635, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0.6em 0; }
+
+/* Break out larger images to be wider than the main text column
+   the class is applied with jQuery */
+/* line 645, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-content .full-img {
+  width: 126%;
+  max-width: none;
+  margin: 0 -13%; }
+
+/* The author credit area after the post */
+/* line 652, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-footer {
+  position: relative;
+  margin: 4rem 0 0 0;
+  padding: 4rem 0 0 0;
+  border-top: #EBF2F6 1px solid; }
+
+/* line 659, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-footer h4 {
+  font-size: 1.8rem;
+  margin: 0; }
+
+/* line 664, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-footer p {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  line-height: 1.6em; }
+
+/* list of author links - location / url */
+/* line 671, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.author-meta {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-style: italic;
+  color: #9EABB3; }
+
+/* line 681, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.author-meta li {
+  float: left;
+  margin-left: 10px;
+  /* space to the left of the bullet */ }
+
+/* bullet divider */
+/* line 687, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.author-meta li:before {
+  content: "•";
+  display: inline-block;
+  margin-right: 10px;
+  /* space to the right of the bullet */
+  color: #BBC7CC; }
+
+/* disable the bullet divider for the first item in the list */
+/* line 695, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.author-meta li:first-child {
+  margin-left: 0; }
+
+/* line 696, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.author-meta li:first-child:before {
+  display: none; }
+
+/* line 698, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.author-meta a {
+  color: #9EABB3; }
+
+/* line 701, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.author-meta a:hover {
+  color: #57A3E8; }
+
+/* Create some space to the right for the share links */
+/* line 706, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-footer .author {
+  margin-right: 180px; }
+
+/* Drop the share links in the space to the right.
+   Doing it like this means it's easier for the author bio
+   to be flexible at smaller screen sizes while the share
+   links remain at a fixed width the whole time */
+/* line 714, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-footer .share {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 140px; }
+
+/* line 721, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-footer .share a {
+  font-size: 1.8rem;
+  display: inline-block;
+  margin: 1rem 1.6rem 1.6rem 0;
+  color: #BBC7CC;
+  text-decoration: none; }
+
+/* line 729, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.post-footer .share a:hover {
+  color: #50585D; }
+
+/* ==========================================================================
+   6. Third Party Elements - Embeds from other services
+   ========================================================================== */
+/* Github */
+/* line 740, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.gist table {
+  margin: 0;
+  font-size: 1.4rem; }
+
+/* line 745, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.gist .line-number {
+  min-width: 25px;
+  font-size: 1.1rem; }
+
+/* ==========================================================================
+   7. Pagination - Tools to let you flick between pages
+   ========================================================================== */
+/* The main wrapper for our pagination links */
+/* line 756, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.pagination {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  margin: 4rem auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  color: #9EABB3;
+  text-align: center; }
+
+/* line 767, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.pagination a {
+  color: #9EABB3; }
+
+/* Push the previous/next links out to the left/right */
+/* line 773, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.older-posts,
+.newer-posts {
+  position: absolute;
+  display: inline-block;
+  padding: 0 15px;
+  border: #EBF2F6 2px solid;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: border ease 0.3s; }
+
+/* line 783, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.older-posts {
+  right: 0; }
+
+/* line 787, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.page-number {
+  display: inline-block;
+  padding: 2px 0; }
+
+/* line 792, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.newer-posts {
+  left: 0; }
+
+/* line 797, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.older-posts:hover,
+.newer-posts:hover {
+  border-color: #9EABB3; }
+
+/* ==========================================================================
+   8. Footer - The bottom of every page
+   ========================================================================== */
+/* line 806, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.site-footer {
+  position: relative;
+  margin: 8rem 0 0 0;
+  padding: 4rem 0;
+  border-top: #EBF2F6 1px solid;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.7em;
+  color: #BBC7CC;
+  text-align: center;
+  background: #F7FAFB; }
+
+/* line 819, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.site-footer a {
+  color: #BBC7CC;
+  text-decoration: underline; }
+
+/* line 824, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.site-footer a:hover {
+  color: #50585D; }
+
+/* line 828, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.poweredby .icon-ghost {
+  font-weight: 700;
+  text-decoration: none; }
+
+/* line 833, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.poweredby .icon-ghost:hover {
+  text-decoration: none; }
+
+/* line 837, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.poweredby .icon-ghost:before {
+  font-size: 1rem;
+  margin-right: 0.2em; }
+
+/* The subscribe icon on the footer */
+/* line 843, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.subscribe {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  margin-left: -15px;
+  border: #EBF2F6 1px solid;
+  text-align: center;
+  line-height: 2.4rem;
+  border-radius: 50px;
+  background: #fff;
+  transition: box-shadow 0.5s; }
+
+/* The RSS icon, inserted via icon font */
+/* line 859, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.subscribe:before {
+  color: #D2DEE3;
+  font-size: 10px;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  font-weight: bold;
+  transition: color 0.5s ease; }
+
+/* Add a box shadow to on hover */
+/* line 870, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.subscribe:hover {
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 3px;
+  transition: box-shadow 0.25s; }
+
+/* line 875, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.subscribe:hover:before {
+  color: #50585D; }
+
+/* CSS tooltip saying "Subscribe!" - initially hidden */
+/* line 880, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.tooltip {
+  opacity: 0;
+  display: inline-block;
+  padding: 4px 8px 5px 8px;
+  position: absolute;
+  top: -23px;
+  left: -21px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1em;
+  text-align: center;
+  background: #50585D;
+  border-radius: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease, top 0.3s ease; }
+
+/* The little chiclet arrow under the tooltip, pointing down */
+/* line 898, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.tooltip:after {
+  content: "";
+  border-width: 5px 5px 0 5px;
+  border-style: solid;
+  border-color: #50585D transparent;
+  display: block;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -5px;
+  z-index: 220;
+  width: 0; }
+
+/* On hover, show the tooltip! */
+/* line 913, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+.subscribe:hover .tooltip {
+  opacity: 1;
+  top: -33px; }
+
+/* ==========================================================================
+   9. Media Queries - Smaller than 900px
+   ========================================================================== */
+@media only screen and (max-width: 900px) {
+  /* line 925, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  blockquote {
+    margin-left: 0; }
+
+  /* line 929, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .site-head {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 240px;
+    padding: 15% 0; }
+
+  /* line 938, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .blog-title {
+    font-size: 4rem;
+    letter-spacing: -1px; }
+
+  /* line 943, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .blog-description {
+    font-size: 1.7rem;
+    line-height: 1.5em; }
+
+  /* line 948, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post {
+    font-size: 0.9em;
+    line-height: 1.6em; }
+
+  /* line 953, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post-template .post {
+    padding-bottom: 1rem; }
+
+  /* line 957, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post-template .post-header {
+    padding: 40px 0; }
+
+  /* line 961, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  h1 {
+    font-size: 4.8rem;
+    text-indent: -2px; }
+
+  /* line 966, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  h2 {
+    font-size: 3.8rem; }
+
+  /* line 970, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  h3 {
+    font-size: 3.3rem; }
+
+  /* line 974, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  h4 {
+    font-size: 2.8rem; } }
+/* ==========================================================================
+   10. Media Queries - Smaller than 500px
+   ========================================================================== */
+@media only screen and (max-width: 500px) {
+  /* line 987, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .blog-logo img {
+    max-height: 80px; }
+
+  /* line 992, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .inner,
+  .pagination {
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px; }
+
+  /* line 998, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post {
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 0.8em;
+    line-height: 1.6em; }
+
+  /* line 1006, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .site-head {
+    padding: 10% 0; }
+
+  /* line 1010, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .blog-title {
+    font-size: 3rem; }
+
+  /* line 1014, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .blog-description {
+    font-size: 1.5rem; }
+
+  /* line 1019, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  h1, h2 {
+    font-size: 3rem;
+    line-height: 1.1em;
+    letter-spacing: -1px; }
+
+  /* line 1025, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  h3 {
+    font-size: 2.8rem; }
+
+  /* line 1029, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  h4 {
+    font-size: 2.3rem; }
+
+  /* line 1033, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post-template .post {
+    padding-bottom: 0; }
+
+  /* line 1037, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post-template .post-header {
+    padding: 30px 0; }
+
+  /* line 1041, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post-content img {
+    padding: 0; }
+
+  /* line 1045, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post-content .full-img {
+    width: auto;
+    width: calc(100% + 32px);
+    /* expand with to image + margins */
+    margin: 0 -16px;
+    /* get rid of margins */
+    min-width: 0;
+    max-width: 112%;
+    /* fallback when calc doesn't work */ }
+
+  /* line 1053, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post-meta {
+    font-size: 1.3rem; }
+
+  /* line 1057, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post-footer {
+    padding: 4rem 0;
+    text-align: center; }
+
+  /* line 1062, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post-footer .author {
+    margin: 0 0 2rem 0;
+    padding: 0 0 1.6rem 0;
+    border-bottom: #EBF2F6 1px dashed; }
+
+  /* line 1068, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post-footer .share {
+    position: static;
+    width: auto; }
+
+  /* line 1073, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .post-footer .share a {
+    margin: 1.4rem 0.8rem 0 0.8rem; }
+
+  /* line 1078, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .older-posts,
+  .newer-posts {
+    position: static;
+    margin: 10px 0; }
+
+  /* line 1083, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .page-number {
+    display: block; }
+
+  /* line 1087, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/vendor/casper.css */
+  .site-footer {
+    margin-top: 6rem;
+    font-size: 1.1rem; } }
+/* ==========================================================================
+   End of file. Media queries should be the last thing here. Do not add stuff
+   below this point, or it will probably fuck everything up.
+   ========================================================================== */
+/* line 1, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight table td {
+  padding: 5px; }
+
+/* line 2, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight table pre {
+  margin: 0; }
+
+/* line 3, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .cm {
+  color: #999988;
+  font-style: italic; }
+
+/* line 7, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .cp {
+  color: #999999;
+  font-weight: bold; }
+
+/* line 11, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .c1 {
+  color: #999988;
+  font-style: italic; }
+
+/* line 15, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic; }
+
+/* line 20, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .c, .highlight .cd {
+  color: #999988;
+  font-style: italic; }
+
+/* line 24, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2; }
+
+/* line 28, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd; }
+
+/* line 32, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .ge {
+  color: #000000;
+  font-style: italic; }
+
+/* line 36, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .gr {
+  color: #aa0000; }
+
+/* line 39, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .gh {
+  color: #999999; }
+
+/* line 42, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd; }
+
+/* line 46, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .go {
+  color: #888888; }
+
+/* line 49, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .gp {
+  color: #555555; }
+
+/* line 52, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .gs {
+  font-weight: bold; }
+
+/* line 55, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .gu {
+  color: #aaaaaa; }
+
+/* line 58, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .gt {
+  color: #aa0000; }
+
+/* line 61, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .kc {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 65, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .kd {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 69, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .kn {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 73, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .kp {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 77, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .kr {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 81, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .kt {
+  color: #445588;
+  font-weight: bold; }
+
+/* line 85, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .k, .highlight .kv {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 89, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .mf {
+  color: #009999; }
+
+/* line 92, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .mh {
+  color: #009999; }
+
+/* line 95, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .il {
+  color: #009999; }
+
+/* line 98, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .mi {
+  color: #009999; }
+
+/* line 101, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .mo {
+  color: #009999; }
+
+/* line 104, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #009999; }
+
+/* line 107, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .sb {
+  color: #d14; }
+
+/* line 110, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .sc {
+  color: #d14; }
+
+/* line 113, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .sd {
+  color: #d14; }
+
+/* line 116, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .s2 {
+  color: #d14; }
+
+/* line 119, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .se {
+  color: #d14; }
+
+/* line 122, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .sh {
+  color: #d14; }
+
+/* line 125, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .si {
+  color: #d14; }
+
+/* line 128, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .sx {
+  color: #d14; }
+
+/* line 131, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .sr {
+  color: #009926; }
+
+/* line 134, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .s1 {
+  color: #d14; }
+
+/* line 137, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .ss {
+  color: #990073; }
+
+/* line 140, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .s {
+  color: #d14; }
+
+/* line 143, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .na {
+  color: #008080; }
+
+/* line 146, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .bp {
+  color: #999999; }
+
+/* line 149, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .nb {
+  color: #0086B3; }
+
+/* line 152, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .nc {
+  color: #445588;
+  font-weight: bold; }
+
+/* line 156, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .no {
+  color: #008080; }
+
+/* line 159, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .nd {
+  color: #3c5d5d;
+  font-weight: bold; }
+
+/* line 163, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .ni {
+  color: #800080; }
+
+/* line 166, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .ne {
+  color: #990000;
+  font-weight: bold; }
+
+/* line 170, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .nf {
+  color: #990000;
+  font-weight: bold; }
+
+/* line 174, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .nl {
+  color: #990000;
+  font-weight: bold; }
+
+/* line 178, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .nn {
+  color: #555555; }
+
+/* line 181, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .nt {
+  color: #000080; }
+
+/* line 184, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .vc {
+  color: #008080; }
+
+/* line 187, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .vg {
+  color: #008080; }
+
+/* line 190, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .vi {
+  color: #008080; }
+
+/* line 193, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .nv {
+  color: #008080; }
+
+/* line 196, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .ow {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 200, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .o {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 204, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight .w {
+  color: #bbbbbb; }
+
+/* line 207, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/_syntax.css.erb */
+.highlight {
+  background-color: #f8f8f8; }
+
+/* line 5, /Users/y_kubo/Documents/Repositories/github.com/spookies-jp/spookies-jp.github.io/source/stylesheets/application.css.scss */
+pre {
+  background: transparent;
+  border-style: none;
+  padding: initial; }
