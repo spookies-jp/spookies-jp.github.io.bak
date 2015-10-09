@@ -1,0 +1,42 @@
+@import "variables";
+@import "mixin";
+
+body
+{
+    background: $background image-url("404_rainbow.png") repeat-x 0 180px;
+}
+
+.error404
+{
+    #page-not-found
+    {
+        h1
+        {
+            font-size: $fontSize * 14;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+
+        p.description
+        {
+            font-size: $fontSize * 4;
+        }
+
+        h1, p.description
+        {
+            @include text-stroke($titlesShadow);
+
+            line-height: 1;
+            text-align: center;
+        }
+
+        footer
+        {
+            fieldset > *
+            {
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@import "variables";
+@import "mixin";
+
+#contact
+{
+    form > div
+    {
+        @include masked;
+
+        border: 2px solid;
+        display: table;
+        width: 100%;
+        margin-bottom: 1em;
+
+        label, input, textarea
+        {
+            display: table-cell;
+        }
+
+        label
+        {
+            @include text-stroke($titlesShadow, 2);
+
+            width: 25%;
+            padding: 1em 0 0 1em;
+            vertical-align: top;
+            background-color: rgba(#fff, 0.4);
+            font-size: 150%;
+
+            span { color: $spookyColor; text-shadow: none; font-size: $fontSize; }
+        }
+
+        input
+        {
+            width: 45%;
+            margin: 1em;
+        }
+
+        textarea
+        {
+            width: 94%;
+            width: calc(100% - 3em);
+            margin: 1em;
+        }
+
+        br {
+            display: none;
+        }
+
+        &.wpcf7-response-output {
+            line-height: 2;
+            height: 2em;
+            padding: 0;
+            margin: 0;
+            text-indent: 1em;
+        }
+
+        &.wpcf7-response-output.wpcf7-display-none {
+            display: none;
+        }
+
+        &.wpcf7-not-valid-tip {
+            text-shadow: none;
+        }
+    }
+
+    .contact-submit
+    {
+        background: none;
+        border: 0;
+        text-align: center;
+
+        [type="submit"]
+        {
+            background-color: $spookyColor;
+            width: 25%;
+            border: 0;
+            color: inherit;
+            font-size: 200%;
+            line-height: 1.75;
+            display: inline-block;
+        }
+    }
+}

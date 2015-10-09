@@ -1,0 +1,236 @@
+@import "compass/css3";
+
+@import "colors";
+@import "compass/utilities/color/contrast";
+
+@import "variables";
+@import "mixin";
+
+/**
+ * Archive(s) page
+ */
+
+#post, #posts
+{
+    $darken: $titlesShadow;
+    $lighten: $foreground;
+
+    nav
+    {
+        p
+        {
+            @include text-stroke($foreground, 1);
+
+            color: contrast-color($foreground);
+            width: 50%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .pull-right
+        {
+            text-align: right;
+        }
+    }
+
+    article
+    {
+        @include masked(true);
+
+        border: 2px solid;
+        margin-bottom: 2em;
+        text-shadow: none;
+
+        .page-title
+        {
+            font-size: 180%;
+            margin: 0;
+            padding: 0.2em 0.33em;
+            background-color: $darken;
+            color: $lighten;
+
+            small
+            {
+                font-size: 50%;
+            }
+        }
+
+        section, footer
+        {
+            padding: 1.5em 1.75em;
+        }
+
+        & > section,
+        h1, h2, h3, h4,
+        p, li
+        {
+            color: $darken;
+        }
+
+        & > section,
+        p, li
+        {
+            text-shadow: 0 0 1px $darken;
+            line-height: 175%;
+        }
+
+        p, li
+        {
+            margin-bottom: $marginBottomWithParagraph;
+
+            a.more-link
+            {
+                display: block;
+            }
+        }
+
+        p:last-child
+        {
+            margin-bottom: 0;
+        }
+
+        section
+        {
+            padding-bottom: 0;
+        }
+
+        footer
+        {
+            padding-top: 0;
+            text-align: right;
+
+            a
+            {
+                color: $spookyColor;
+            }
+        }
+    }
+
+    .thumbnail
+    {
+        padding: 0;
+        border-radius: 0;
+        margin: 7px;
+        border: 0;
+        box-shadow: none;
+        text-align: center;
+
+        .alternate
+        {
+            background-color: #fff;
+            text-indent: -100em;
+            border: 1px solid $imagesBorder;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+
+    .widget, .widget_archive, .widget_categories
+    {
+        .widgettitle
+        {
+            @include text-stroke($darken, 2);
+
+            font-size: 180%;
+            font-weight: normal;
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    .widget_archive, .widget_categories
+    {
+        width: 100%;
+        overflow: hidden;
+
+        .widgetcontent
+        {
+            background-color: $spookyColor;
+            border: 2px solid;
+            padding: 1em;
+        }
+
+        & > ul
+        {
+            padding: 0.5em 1em;
+        }
+    }
+}
+
+html.csstransitions
+{
+    $darken: $titlesShadow;
+    $lighten: $foreground;
+
+    #post
+    {
+        .widget.recent.posts
+        {
+            margin: 0 ($margin * 2);
+            overflow: hidden;
+            position: relative;
+
+            .control.widget
+            {
+                p
+                {
+                    position: absolute;
+                    top: 50px; // ul.recent.posts height / 2
+                    font-size: 55px;
+                }
+
+                [data-direction="left"]
+                {
+                    left: 0;
+                }
+                [data-direction="right"]
+                {
+                    right: 0;
+                }
+            }
+        }
+
+        ul.recent.posts
+        {
+            @include transition-property(left);
+            @include transition-duration(1s);
+
+            width: 3000px;
+            height: 100px;
+            white-space: nowrap;
+            position: relative;
+            left: -(240px + $fontSize * 2);
+
+            li
+            {
+                border: 3px solid $titlesShadow;
+                width: 240px;
+                height: 100%;
+                white-space: normal;
+                background-color: $darken;
+                margin-left: 1em;
+                padding: 6px;
+                box-sizing: border-box;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            li.active
+            {
+                @include masked(true);
+
+                background-color: transparent;
+                color: $titlesShadow;
+                text-shadow: none;
+            }
+        }
+    }
+}
+
+.widget_tag_cloud .tagcloud
+{
+    background-color: $spookyColor;
+    border: $borderWidthCommon solid;
+    padding: 1em;
+}

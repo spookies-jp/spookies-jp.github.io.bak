@@ -1,0 +1,132 @@
+/* line 11, ../scss/portfolio.scss */
+#works #sidebar ul#menu-portfolio {
+  position: relative;
+  color: #fff;
+  margin: 0;
+  border: 0 solid;
+  border-left-width: 2px;
+  z-index: 256;
+}
+/* line 20, ../scss/portfolio.scss */
+#works #sidebar ul#menu-portfolio li {
+  border: 2px solid;
+  border-left-width: 0;
+  margin: 0;
+  padding: 14px;
+  background-color: #013a55;
+}
+/* line 28, ../scss/portfolio.scss */
+#works #sidebar ul#menu-portfolio li.active {
+  border-bottom-color: #013a55;
+}
+/* line 36, ../scss/portfolio.scss */
+#works main {
+  background-image: url('/wp-content/themes/we-are-spookies/img/tile.png?1407149319');
+  text-shadow: #000 0 1px 2px;
+  border: 2px solid;
+  position: relative;
+  top: -2px;
+}
+/* line 45, ../scss/portfolio.scss */
+#works main article {
+  position: relative;
+}
+/* line 49, ../scss/portfolio.scss */
+#works main article.active header .thumbnail {
+  display: none;
+}
+/* line 54, ../scss/portfolio.scss */
+#works main article header {
+  background-color: #013a55;
+  padding: 12px;
+}
+/* line 61, ../scss/portfolio.scss */
+#works main article header h1 {
+  font-size: inherit;
+  line-height: 40px;
+  margin: 0;
+  display: inline-block;
+}
+/* line 68, ../scss/portfolio.scss */
+#works main article header h1 small {
+  font-size: 80%;
+}
+/* line 74, ../scss/portfolio.scss */
+#works main article header h1.attached {
+  padding-left: 72px;
+  background: left top / 60px 40px no-repeat;
+  text-shadow: none;
+}
+/* line 84, ../scss/portfolio.scss */
+#works main article > .contents.in {
+  margin: 1.2em;
+}
+/* line 89, ../scss/portfolio.scss */
+#works main article > .contents [class*="pull"] {
+  width: 50%;
+}
+/* line 94, ../scss/portfolio.scss */
+#works main article > .contents .thumbnail {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 0;
+  padding: 8px;
+}
+/* line 101, ../scss/portfolio.scss */
+#works main article > .contents .description {
+  padding-left: 1.2em;
+}
+/* line 107, ../scss/portfolio.scss */
+#works main article footer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1em;
+  padding: 6px 0;
+}
+/* line 116, ../scss/portfolio.scss */
+#works main article div.pull-right, #works main article div.pull-left {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  /* line 130, ../scss/portfolio.scss */
+  #works main article header h1.attached {
+    background-image: none !important;
+    padding-left: 0;
+  }
+  /* line 131, ../scss/portfolio.scss */
+  #works main article footer {
+    display: none;
+  }
+  /* line 136, ../scss/portfolio.scss */
+  #works main .collapse {
+    height: auto;
+  }
+  /* line 141, ../scss/portfolio.scss */
+  #works main article .contents {
+    margin: 1.2em;
+  }
+  /* line 145, ../scss/portfolio.scss */
+  #works main article .contents [class*="pull"] {
+    float: none;
+    width: 100%;
+  }
+  /* line 151, ../scss/portfolio.scss */
+  #works main article .contents [class*="pull"]:last-child {
+    padding-left: 0;
+  }
+  /* line 158, ../scss/portfolio.scss */
+  #works main article .contents [class*="pull"] p, #works main article .contents [class*="pull"] ul, #works main article .contents .description p, #works main article .contents .description ul {
+    margin: 1em 0;
+  }
+  /* line 162, ../scss/portfolio.scss */
+  #works main article .contents [class*="pull"] p:first-child, #works main article .contents [class*="pull"] ul:first-child, #works main article .contents .description p:first-child, #works main article .contents .description ul:first-child {
+    margin-top: 0;
+  }
+  /* line 163, ../scss/portfolio.scss */
+  #works main article .contents [class*="pull"] p:last-child, #works main article .contents [class*="pull"] ul:last-child, #works main article .contents .description p:last-child, #works main article .contents .description ul:last-child {
+    margin-bottom: 0;
+  }
+}

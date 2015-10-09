@@ -1,0 +1,133 @@
+/* line 6, ../scss/home.scss */
+#our-banners {
+  display: none;
+}
+
+/* line 13, ../scss/home.scss */
+#toppage .page-header {
+  margin: 0;
+}
+/* line 18, ../scss/home.scss */
+#toppage #posts {
+  position: relative;
+  width: 100%;
+}
+/* line 23, ../scss/home.scss */
+#toppage #posts .post {
+  background-image: url('/wp-content/themes/we-are-spookies/img/tile.png?1407149319');
+  text-shadow: #000 0 1px 2px;
+  border: 2px solid;
+  box-sizing: border-box;
+  width: 305px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+/* line 35, ../scss/home.scss */
+#toppage #posts .post header h1 {
+  font-size: inherit;
+  line-height: inherit;
+}
+/* line 41, ../scss/home.scss */
+#toppage #posts .post header .thumbnail {
+  padding: 0;
+  border-radius: 0;
+  margin: 7px;
+  border: 0;
+  box-shadow: none;
+  text-align: center;
+}
+/* line 50, ../scss/home.scss */
+#toppage #posts .post header .thumbnail .alternate {
+  background-color: #fff;
+  text-indent: 1400px;
+  border: 1px solid #02baff;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* line 60, ../scss/home.scss */
+#toppage #posts .post header .page-title {
+  font-size: 110%;
+  padding: 0 7pt;
+}
+/* line 66, ../scss/home.scss */
+#toppage #posts .post header .post-header {
+  text-align: center;
+  font-size: 120%;
+  background-color: #ef59a1;
+  padding: 0.4em 0;
+  margin: 0;
+  text-shadow: none;
+}
+/* line 77, ../scss/home.scss */
+#toppage #posts .post .contents {
+  margin-top: 1em;
+  padding: 0 7pt;
+  text-shadow: black 0 1px 2px;
+  word-break: break-all;
+}
+/* line 85, ../scss/home.scss */
+#toppage #posts .post .more-link {
+  display: block;
+  text-align: right;
+  text-transform: uppercase;
+}
+/* line 96, ../scss/home.scss */
+#toppage #sidebar2 li {
+  padding: 10px;
+}
+/* line 101, ../scss/home.scss */
+#toppage #sidebar2 li:first-child {
+  padding-top: 0;
+}
+
+@media (max-width: 979px) {
+  /* line 111, ../scss/home.scss */
+  #sidebar2 {
+    margin-top: 1em;
+  }
+  /* line 115, ../scss/home.scss */
+  #sidebar2 li {
+    text-align: center;
+  }
+
+  /* line 122, ../scss/home.scss */
+  #toppage #posts, #toppage #posts .post {
+    position: static;
+  }
+  /* line 127, ../scss/home.scss */
+  #toppage #posts .post {
+    width: 100%;
+  }
+}
+/* line 134, ../scss/home.scss */
+.no-js #toppage #posts {
+  height: auto;
+}
+/* line 138, ../scss/home.scss */
+.no-js #toppage #posts, .no-js #toppage #posts .post {
+  position: static;
+}
+/* line 143, ../scss/home.scss */
+.no-js #toppage #posts .post {
+  left: auto;
+  top: auto;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  /* line 153, ../scss/home.scss */
+  #toppage #posts .post {
+    width: 250px;
+  }
+}
+/* This element holds injected scripts inside iframes that in some cases may stretch layouts. So, we're just hiding it. */
+/* line 166, ../scss/home.scss */
+#fb-root {
+  display: none;
+}
+
+/* To fill the container and nothing else */
+/* line 171, ../scss/home.scss */
+.widget_facebook_likebox, .widget_facebook_likebox iframe[style] {
+  width: 100% !important;
+}

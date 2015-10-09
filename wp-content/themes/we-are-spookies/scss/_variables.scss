@@ -1,0 +1,20 @@
+@import "colors";
+
+$headerBackground: #fff;
+
+$fontFamily: Meiryo, Helvetica, sans-serif;
+$fontSize: 14px;
+$smallFontSize: $fontSize * 0.8;
+
+$background: $sunrise;
+$foreground: #ffffff;
+
+$marginBottomWithParagraph: 1em;
+
+$borderWidthCommon: 2px;
+
+$margin: 20px;
+
+// 画像スプライト用
+$menus-position: 50%;
+$menus-spacing: $fontSize * 2;

@@ -1,0 +1,104 @@
+@import "variables";
+
+@media (max-width: 979px)
+{
+    html body, html body.logged-in > header
+    {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 767px)
+{
+    .container
+    {
+        padding-left: $margin;
+        padding-right: $margin;
+    }
+
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top
+    {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+main
+{
+    display: block;
+}
+
+html
+{
+    background-color: #000;
+}
+
+body
+{
+    background-color: $background;
+    color: $foreground;
+    font: $fontSize/1 $fontFamily;
+    padding: 0;
+    padding-top: 80px + $margin;
+}
+
+body.logged-in > header
+{
+    padding-top: 32px;
+}
+
+h1, h2, h3, h4, h5, h6,
+dt
+{
+    font-weight: normal;
+}
+
+a, a:hover, h1 small
+{
+    color: inherit;
+}
+
+ul
+{
+    font-size: 0;
+
+    li
+    {
+        font-size: $fontSize;
+    }
+}
+
+input
+{
+    font-family: inherit;
+}
+
+/**
+ * navbar
+ */
+.navbar .nav > li > a
+{
+    padding: 0;
+}
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus
+{
+    background-color: transparent;
+
+    box-shadow: none;
+}
+
+.lead
+{
+    margin-bottom: $marginBottomWithParagraph;
+    font-size: 10pt;
+    font-weight: normal;
+    line-height: 1;
+}
+
+#sidebar2 .widgettitle
+{
+    display: none;
+}
