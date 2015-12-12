@@ -9,8 +9,8 @@ var EntryBox = React.createClass({
             url: this.props.url,
             dataType: 'json',
             success: function(data) {
-                console.log(data);
-                this.setState({data: data.entry});
+//                console.log(data);
+                this.setState({data: data});
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(this.props.url, status, err.toString() );
