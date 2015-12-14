@@ -9,8 +9,8 @@ var EntryBox = React.createClass({
             url: this.props.url,
             dataType: 'json',
             success: function(data) {
-//                console.log(data);
                 this.setState({data: data});
+                formatBlogEntries();    // ignite.js 記事を整形
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(this.props.url, status, err.toString() );
@@ -36,7 +36,7 @@ var EntryList = React.createClass({
             );
         });
         return (
-            <div className="posts">
+            <div id="posts">
                 {entryNodes}
             </div>
         );
@@ -106,5 +106,5 @@ var Entry = React.createClass({
 
 ReactDOM.render(
     <EntryBox url="http://api.spookies.co.jp:8000/hatena.php" />,
-    document.getElementById('posts')
+    document.getElementById('blog')
 );

@@ -11,7 +11,7 @@ $(function() {
     });
 });
 
-(function($) {
+var formatBlogEntries = (function() {
     var func = function(event) {
         var container = '#toppage #posts';
         var items = container + ' .post';
@@ -35,6 +35,8 @@ $(function() {
         if ($container.length > 0) grid.lay();
     };
 
+// console.log($('#posts').length);
+    func();
     if ($('#posts').length > 0) $(window).on('load resize', func);
 
     if (!Modernizr.csstransitions) return;
@@ -50,4 +52,4 @@ $(function() {
 
         karousel.slide($(event.currentTarget).data('direction'));
     });
-})(window.jQuery);
+});
