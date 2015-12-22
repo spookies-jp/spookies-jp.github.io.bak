@@ -72,7 +72,7 @@ var Entry = React.createClass({
     getSummary: function(entry) {
         var pdate = new Date(entry.published);
         var pday    = pdate.getDate();
-        var summary = entry.summary.substring(0, 80 + pday)
+        var summary = entry.summary.substring(0, 80 + pday) + "..."
         return summary;
     },
 
