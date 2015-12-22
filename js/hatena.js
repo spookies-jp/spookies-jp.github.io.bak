@@ -52,7 +52,8 @@ var hrStyle = {
 };
 
 var thumbnailStyle = {
-  height: '150px'
+  max-height: '150px',
+  max-width: '232px',
 };
 
 var Entry = React.createClass({
@@ -66,6 +67,13 @@ var Entry = React.createClass({
         var pminute = pdate.getMinutes();
         var psecond = pdate.getSeconds();
         return pyear + '年' + pmonth + '月' + pday + '日';
+    },
+
+    getSummary: function(entry) {
+        var pdate = new Date(entry.published);
+        var pday    = pdate.getDate();
+        var summary = entry.summary.substring(0, 80 + pday)
+        return summary;
     },
 
     getImage: function(content) {
@@ -95,7 +103,7 @@ var Entry = React.createClass({
                 <hr style={hrStyle} />
                 <section className="contents">
                     <p>
-                        {this.props.entry.summary.substring(0,100)}
+                        {this.getSummary(this.props.entry)}
                         <a href={this.props.entry.link['@attributes'].href} className="more-link">Read more »</a>
                     </p>
                 </section>
