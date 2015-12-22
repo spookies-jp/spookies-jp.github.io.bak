@@ -52,8 +52,8 @@ var hrStyle = {
 };
 
 var thumbnailStyle = {
-  max-height: '150px',
-  max-width: '232px',
+  maxHeight: '150px',
+  maxWidth: '232px',
 };
 
 var Entry = React.createClass({
