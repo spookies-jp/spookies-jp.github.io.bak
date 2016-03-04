@@ -1,2 +1,4 @@
 *.BAK
 wp-content/uploads/*
+npm-debug.log
+
