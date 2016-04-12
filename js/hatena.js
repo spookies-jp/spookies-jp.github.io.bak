@@ -88,23 +88,25 @@ var Entry = React.createClass({
         return;
     },
 
+
     render: function() {
+        const entry_url = this.props.entry.link[0]['@attributes'].href;
         return (
             <article id={this.props.id} className="post">
                 <header>
                     <p className="post-header">
                         <time>{this.formatDate(this.props.entry.published)}</time>
                     </p>
-                    <div className="thumbnail"><a href={this.props.entry.link['@attributes'].href}><img style={thumbnailStyle} src={this.getImage(this.props.entry.content)} /></a></div>
+                    <div className="thumbnail"><a href={entry_url}><img style={thumbnailStyle} src={this.getImage(this.props.entry.content)} /></a></div>
                     <h1 className="page-title">
-                        <a href={this.props.entry.link['@attributes'].href}>{this.props.entry.title}</a>
+                        <a href={entry_url}>{this.props.entry.title}</a>
                     </h1>
                 </header>
                 <hr style={hrStyle} />
                 <section className="contents">
                     <p>
                         {this.getSummary(this.props.entry)}
-                        <a href={this.props.entry.link['@attributes'].href} className="more-link">Read more »</a>
+                        <a href={entry_url} className="more-link">Read more »</a>
                     </p>
                 </section>
             </article>
