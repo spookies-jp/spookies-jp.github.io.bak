@@ -90,7 +90,7 @@ var Entry = React.createClass({
 
 
     render: function() {
-        const entry_url = this.props.entry.link[0]['@attributes'].href;
+        const entry_url = this.props.entry.link['@attributes'].href;
         return (
             <article id={this.props.id} className="post">
                 <header>
