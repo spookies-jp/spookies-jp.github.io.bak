@@ -89,8 +89,19 @@ var Entry = React.createClass({
     },
 
 
+    isArray: function(o) {
+      return o != null && typeof o === "object" && 'pop' in o && 'join' in o;
+    },
+
     render: function() {
-        const entry_url = this.props.entry.link['@attributes'].href;
+        const linkNode = this.props.entry.link;
+        let entry_url = '';
+        if (this.isArray(linkNode)) {
+            entry_url = linkNode[0]['@attributes'].href;
+        } else {
+            entry_url = linkNode['@attributes'].href;
+        }
+
         return (
             <article id={this.props.id} className="post">
                 <header>
